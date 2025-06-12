@@ -28,6 +28,12 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
+    public User(String login, String password, UserRole role) {
+        this.login =  login;
+        this.password = password;
+        this.role = role;
+    }
+
     @Override
     public String getUsername() {
         return login;
